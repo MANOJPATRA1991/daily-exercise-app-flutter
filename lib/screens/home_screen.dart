@@ -1,6 +1,7 @@
 import 'package:daily_exercise_app/screens/details_screen.dart';
 import 'package:daily_exercise_app/widgets/bottom_nav_bar.dart';
 import 'package:daily_exercise_app/widgets/category_card.dart';
+import 'package:daily_exercise_app/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -50,24 +51,7 @@ class HomeScreen extends StatelessWidget {
                         .copyWith(fontWeight: FontWeight.w900),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 30),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 30,
-                      vertical: 5,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(29.5),
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Search",
-                        icon: SvgPicture.asset("assets/icons/search.svg"),
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
+                  SearchBar(),
                   Expanded(
                     child: GridView.count(
                       crossAxisCount: 2,
@@ -114,3 +98,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
